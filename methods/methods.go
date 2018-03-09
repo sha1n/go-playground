@@ -12,7 +12,7 @@ func (i *item) print() {
 
 func Run() {
 
-  fmt.Println("*** Basics / Methods")
+  fmt.Println("*** methods ***")
 
   i := item { id: 1234 }
   i.print()
