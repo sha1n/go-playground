@@ -8,7 +8,7 @@ import (
 
 func Run() {
 
-	fmt.Println("*** Basics / Control")
+	fmt.Println("*** ctrl ***")
 	source := rand.NewSource(time.Now().UnixNano())
 	rand := rand.New(source)
 

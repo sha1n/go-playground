@@ -10,7 +10,7 @@ type song struct {
 
 func Run() {
 
-  fmt.Println("*** Data / JSON")
+  fmt.Println("*** json ***")
 
   s := song { Name: "Fell On Black Days", Artist: "Soundgarden" }
   j, _ := json.Marshal(s)
