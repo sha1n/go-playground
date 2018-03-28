@@ -5,6 +5,7 @@ import (
 	"./json"
 	"./methods"
 	"./pkg"
+	"./routines"
 )
 
 func main() {
@@ -12,4 +13,5 @@ func main() {
 	methods.Run()
 	json.Run()
 	pkg.Run()
+	routines.Run()
 }
