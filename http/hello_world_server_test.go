@@ -1,4 +1,4 @@
-package hello_http
+package hellohttp
 
 import "testing"
 import "net/http"
@@ -11,7 +11,7 @@ func check(msg string, err error, t *testing.T) {
 }
 
 func TestSimpleGetResponse(t *testing.T) {
-	StartHttpServer(":8080")
+	StartHTTPServer(":8080")
 
 	resp, err := http.Get("http://localhost:8080")
 	check("Request failed!", err, t)
@@ -24,5 +24,5 @@ func TestSimpleGetResponse(t *testing.T) {
 	bodyString := string(body)
 	t.Log("Got body:", bodyString)
 
-	StopHttpServer()
+	StopHTTPServer()
 }
