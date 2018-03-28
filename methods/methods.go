@@ -10,7 +10,7 @@ func (i *item) print() {
   fmt.Println("Item ID: ", i.id)
 }
 
-func Run() {
+func Demo() {
 
   fmt.Println("*** methods ***")
 

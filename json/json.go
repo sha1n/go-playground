@@ -8,7 +8,7 @@ type song struct {
   Artist string
 }
 
-func Run() {
+func Demo() {
 
   fmt.Println("*** json ***")
 

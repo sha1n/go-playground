@@ -3,11 +3,10 @@ package pkg
 import "fmt"
 
 func init() {
-    fmt.Println("*** pkg ***")
+	fmt.Println("*** pkg ***")
 
-    fmt.Println("initializing..")
+	fmt.Println("initializing..")
 }
 
-func Run() {
-
-}
+// Demo - demo function for this module
+func Demo() {}

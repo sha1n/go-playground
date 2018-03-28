@@ -6,7 +6,8 @@ import (
 	"time"
 )
 
-func Run() {
+// Demo - demo function for this module
+func Demo() {
 
 	fmt.Println("*** ctrl ***")
 	source := rand.NewSource(time.Now().UnixNano())
@@ -20,6 +21,6 @@ func Run() {
 		} else {
 			fmt.Println("Odd!", n)
 		}
-		i += 1
+		i++
 	}
 }
