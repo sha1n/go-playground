@@ -1,4 +1,4 @@
-package hello_http
+package hellohttp
 
 import (
 	"context"
@@ -8,7 +8,10 @@ import (
 
 var server http.Server
 
-func StartHttpServer(addr string) {
+/*
+StartHTTPServer this is an exported function comment format
+*/
+func StartHTTPServer(addr string) {
 	handler := http.HandlerFunc(helloHandler)
 	server := &http.Server{
 		Addr:    addr,
@@ -18,7 +21,10 @@ func StartHttpServer(addr string) {
 	server.ListenAndServe()
 }
 
-func StopHttpServer() {
+/*
+StopHTTPServer this is an exported function comment format
+*/
+func StopHTTPServer() {
 	server.Shutdown(context.Background())
 }
 
