@@ -2,6 +2,7 @@ package main
 
 import (
 	"./ctrl"
+	"./datastruct"
 	"./json"
 	"./methods"
 	"./pkg"
@@ -10,6 +11,7 @@ import (
 
 func main() {
 	ctrl.Demo()
+	datastruct.Demo()
 	methods.Demo()
 	json.Demo()
 	pkg.Demo()
