@@ -32,24 +32,8 @@ func (workItem *WorkItem) ExecuteInWorker(waitGroup *sync.WaitGroup) {
 
 }
 
-func sleepyWorkerFactory(duration string) Work {
-	work := Work(func() {
-		d, _ := time.ParseDuration(duration)
-		time.Sleep(d)
-	})
-
-	return work
-}
-
-func sleepyWorkItemFactory(desc string, sleepDuration string) WorkItem {
-	exec := sleepyWorkerFactory(sleepDuration)
-	workItem := WorkItem{Description: desc, Executable: exec}
-
-	return workItem
-}
-
-// Run executing code in go routine..
-func Run() {
+// Demo - demo function for this module
+func Demo() {
 
 	fmt.Println("*** Go routines ***")
 	/*
@@ -76,4 +60,20 @@ func Run() {
 	waitGroup.Wait()
 
 	fmt.Println("\r\nOk, Bye!")
+}
+
+func sleepyWorkerFactory(duration string) Work {
+	work := Work(func() {
+		d, _ := time.ParseDuration(duration)
+		time.Sleep(d)
+	})
+
+	return work
+}
+
+func sleepyWorkItemFactory(desc string, sleepDuration string) WorkItem {
+	exec := sleepyWorkerFactory(sleepDuration)
+	workItem := WorkItem{Description: desc, Executable: exec}
+
+	return workItem
 }

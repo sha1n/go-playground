@@ -9,9 +9,9 @@ import (
 )
 
 func main() {
-	ctrl.Run()
-	methods.Run()
-	json.Run()
-	pkg.Run()
-	routines.Run()
+	ctrl.Demo()
+	methods.Demo()
+	json.Demo()
+	pkg.Demo()
+	routines.Demo()
 }
