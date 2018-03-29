@@ -7,10 +7,12 @@ import (
 	"github.com/sha1n/go-playground/json"
 	"github.com/sha1n/go-playground/methods"
 	"github.com/sha1n/go-playground/pkg"
+	"github.com/sha1n/go-playground/refs"
 	"github.com/sha1n/go-playground/routines"
 )
 
 func main() {
+	refs.Demo()
 	ctrl.Demo()
 	datastruct.Demo()
 	methods.Demo()
