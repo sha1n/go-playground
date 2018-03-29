@@ -42,7 +42,7 @@ func Demo() {
 	quitChannel := make(chan os.Signal)
 	signal.Notify(quitChannel, syscall.SIGINT, syscall.SIGTERM)
 
-	waitGroup := &sync.WaitGroup{}
+	waitGroup := new(sync.WaitGroup)
 
 	workItem1 := sleepyWorkItemFactory("Work Item #1", "1s")
 	workItem1.ExecuteInWorker(waitGroup)
