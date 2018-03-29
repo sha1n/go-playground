@@ -4,6 +4,7 @@ import (
 	"github.com/sha1n/go-playground/cmd"
 	"github.com/sha1n/go-playground/ctrl"
 	"github.com/sha1n/go-playground/datastruct"
+	"github.com/sha1n/go-playground/interf"
 	"github.com/sha1n/go-playground/json"
 	"github.com/sha1n/go-playground/methods"
 	"github.com/sha1n/go-playground/pkg"
@@ -19,5 +20,6 @@ func main() {
 	json.Demo()
 	pkg.Demo()
 	cmd.Demo()
+	interf.Demo()
 	routines.Demo()
 }
