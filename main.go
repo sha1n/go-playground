@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/sha1n/go-playground/cmd"
 	"github.com/sha1n/go-playground/ctrl"
 	"github.com/sha1n/go-playground/datastruct"
 	"github.com/sha1n/go-playground/json"
@@ -15,5 +16,6 @@ func main() {
 	methods.Demo()
 	json.Demo()
 	pkg.Demo()
+	cmd.Demo()
 	routines.Demo()
 }
