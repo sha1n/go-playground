@@ -2,6 +2,7 @@ package datastruct
 
 import (
 	"container/list"
+	"container/ring"
 	"fmt"
 )
 
@@ -11,6 +12,7 @@ func Demo() {
 	sliceDemo()
 	mapDemo()
 	listDemo()
+	ringDemo()
 }
 
 func arrayDemo() {
@@ -67,4 +69,23 @@ func listDemo() {
 	for e := l.Front(); e != nil; e = e.Next() {
 		fmt.Printf("e=%s\r\n", e.Value)
 	}
+}
+
+func ringDemo() {
+	fmt.Println("*** rings ***")
+
+	r := ring.New(3)
+
+	fmt.Printf("Ring size is %d\r\n", r.Len())
+
+	r.Value = 1
+	r = r.Next()
+	r.Value = 2
+	r = r.Next()
+	r.Value = 3
+	r = r.Move(2)
+
+	r.Do(func(e interface{}) {
+		fmt.Printf("e=%d\r\n", e)
+	})
 }
