@@ -1,6 +1,7 @@
 package datastruct
 
 import (
+	"container/list"
 	"fmt"
 )
 
@@ -9,6 +10,7 @@ func Demo() {
 	arrayDemo()
 	sliceDemo()
 	mapDemo()
+	listDemo()
 }
 
 func arrayDemo() {
@@ -47,5 +49,22 @@ func mapDemo() {
 	fmt.Printf("Map size is %d\r\n", len(m))
 	for k := range m {
 		fmt.Printf("m[%s]=%d\r\n", k, m[k])
+	}
+}
+
+func listDemo() {
+	fmt.Println("*** lists ***")
+
+	l := list.New()
+	l.PushFront("1")
+	f := l.Front()
+	s := l.InsertAfter("2", f)
+	l.InsertBefore("1.5", s)
+	l.PushBack("3")
+	l.PushFront("0")
+
+	fmt.Printf("List size is %d\r\n", l.Len())
+	for e := l.Front(); e != nil; e = e.Next() {
+		fmt.Printf("e=%s\r\n", e.Value)
 	}
 }
