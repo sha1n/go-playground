@@ -8,8 +8,16 @@ import (
 
 type printable interface {
 	print()
+}
+
+type coloredPrintable interface {
 	printGreen()
 	printRed()
+}
+
+type console interface {
+	printable
+	coloredPrintable
 }
 
 type text string
@@ -29,7 +37,7 @@ func Demo() {
 
 	fmt.Println("*** interfaces ***")
 
-	var p printable
+	var p console
 	s := text("I'm a printable")
 	p = s
 
