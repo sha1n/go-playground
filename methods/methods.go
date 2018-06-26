@@ -3,17 +3,17 @@ package methods
 import "fmt"
 
 type item struct {
-  id int64
+	id int64
 }
 
 func (i *item) print() {
-  fmt.Println("Item ID: ", i.id)
+	fmt.Println("Item ID: ", i.id)
 }
 
 func Demo() {
 
-  fmt.Println("*** methods ***")
+	fmt.Println("*** methods ***")
 
-  i := item { id: 1234 }
-  i.print()
+	i := item{id: 1234}
+	i.print()
 }
