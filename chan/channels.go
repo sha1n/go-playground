@@ -6,7 +6,7 @@ import (
 
 type message struct {
 	index int
-	text string
+	text  string
 }
 
 func interceptor(in chan message) chan message {
