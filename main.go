@@ -11,6 +11,7 @@ import (
 	"github.com/sha1n/go-playground/pkg"
 	"github.com/sha1n/go-playground/refs"
 	"github.com/sha1n/go-playground/routines"
+	"github.com/sha1n/go-playground/templates"
 )
 
 func main() {
@@ -23,5 +24,7 @@ func main() {
 	cmd.Demo()
 	interf.Demo()
 	channels.Demo()
+	templates.Demo()
+
 	routines.Demo()
 }
