@@ -22,3 +22,5 @@ lint:
 test:
 	go test $(MAYBE_VERBOSE) `go list ./...`
 
+demo:
+	go run main.go

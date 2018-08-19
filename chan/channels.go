@@ -37,7 +37,7 @@ func messageHandler(msg message) {
 
 func generateMessages(out chan message) {
 	i := 1
-	for i <= 1000 {
+	for i <= 10 {
 		out <- message{
 			index: i,
 			text:  fmt.Sprintf("Message number %d", i),
