@@ -1,19 +1,19 @@
 package templates
 
 import (
+	"fmt"
 	"os"
+	"path"
 	"text/template"
 	"time"
-	"path"
-	"fmt"
 )
 
 type User struct {
-	Name     string
-	Password string
-	Roles    []string
+	Name         string
+	Password     string
+	Roles        []string
 	CreationTime time.Time
-	Active bool
+	Active       bool
 }
 
 func Demo() {
@@ -21,11 +21,11 @@ func Demo() {
 	fmt.Println("*** Go templates ***")
 
 	desc := User{
-		Name:     "jhendrix",
-		Password: "secret",
-		Roles:    []string{"user", "admin"},
+		Name:         "jhendrix",
+		Password:     "secret",
+		Roles:        []string{"user", "admin"},
 		CreationTime: time.Now(),
-		Active: false,
+		Active:       false,
 	}
 
 	functions := template.FuncMap{
