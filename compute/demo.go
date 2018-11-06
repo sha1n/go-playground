@@ -5,7 +5,14 @@ import (
 )
 
 func Demo() {
-	fmt.Println("*** Compute ***")
+	fmt.Println("*** Compute (high level demo) ***")
+	higherLevelDemo()
+
+	fmt.Println("*** Compute (low level demo) ***")
+	lowLevelDemo()
+}
+
+func lowLevelDemo() {
 
 	/*
 		A computation unit composed of two workers and a producer.
@@ -38,6 +45,30 @@ func Demo() {
 	worker2Context.SendStopSignal()
 	worker2.AwaitShutdown()
 
+}
+
+func higherLevelDemo() {
+
+	/*
+		A computation unit composed of two computer units and a producer.
+	*/
+
+	computer2 := NewComputer(func(message interface{}) {
+		fmt.Printf("Computer#2: processing message %v\n", message)
+	}, 0)
+
+	computer1 := NewComputer(func(message interface{}) {
+		fmt.Printf("Computer#1: processing message %v\n", message)
+		computer2.Enqueue(message)
+	}, 5)
+
+	computer1.Start()
+	computer2.Start()
+
+	produceMessages(10, computer1.Context)
+
+	computer1.Shutdown()
+	computer2.Shutdown()
 }
 
 func produceMessages(count int, context *WorkerContext) {
