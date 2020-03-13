@@ -11,7 +11,7 @@ default:
 
 prepare:
 	cd ..
-	dep ensure -v
+	go mod tidy
 
 format:
 	gofmt -s -w $(GOFILES_NOVENDOR)
