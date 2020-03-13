@@ -4,7 +4,7 @@ go 1.13
 
 require (
 	github.com/davecgh/go-spew v1.1.0 // indirect
-	github.com/fatih/color v1.7.0
+	github.com/fatih/color v1.9.0
 	github.com/gin-contrib/sse v0.0.0-20170109093832-22d885f9ecc7 // indirect
 	github.com/gin-gonic/gin v1.1.5-0.20170702092826-d459835d2b07
 	github.com/google/uuid v0.0.0-20161128191214-064e2069ce9c
