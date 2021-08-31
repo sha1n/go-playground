@@ -8,7 +8,7 @@ require (
 	github.com/gin-gonic/gin v1.1.5-0.20170702092826-d459835d2b07
 	github.com/golang/protobuf v1.2.0 // indirect
 	github.com/google/uuid v0.0.0-20161128191214-064e2069ce9c
-	github.com/sirupsen/logrus v1.7.0
+	github.com/sirupsen/logrus v1.8.1
 	github.com/stretchr/testify v1.7.0
 	github.com/ugorji/go v1.1.1 // indirect
 	golang.org/x/net v0.0.0-20200301022130-244492dfa37a // indirect
