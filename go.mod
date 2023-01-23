@@ -3,7 +3,7 @@ module github.com/sha1n/go-playground
 go 1.13
 
 require (
-	github.com/fatih/color v1.13.0
+	github.com/fatih/color v1.14.0
 	github.com/gin-contrib/sse v0.0.0-20170109093832-22d885f9ecc7 // indirect
 	github.com/gin-gonic/gin v1.1.5-0.20170702092826-d459835d2b07
 	github.com/golang/protobuf v1.2.0 // indirect
